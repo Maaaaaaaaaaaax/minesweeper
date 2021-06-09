@@ -142,7 +142,7 @@ class Mouse(pygame.sprite.Sprite):
 class Collision_detection(pygame.sprite.Sprite):
     def __init__(self, pygame, x, y):
         super().__init__()
-        self.image = pygame.image.load(os.path.join(Settings.images_path, "grey.png")).convert_alpha()
+        self.image = pygame.image.load(os.path.join(Settings.images_path, "tile.png")).convert_alpha()
         self.image = pygame.transform.scale(self.image, (64, 64))
         self.rect = self.image.get_rect()
         self.rect.left = x
@@ -151,7 +151,7 @@ class Collision_detection(pygame.sprite.Sprite):
 
     def update(self):
         if self.moved == False and Settings.click == True and pygame.mouse.get_pos()[0] >= self.rect.left and pygame.mouse.get_pos()[0] <= self.rect.right and pygame.mouse.get_pos()[1] >= self.rect.top and pygame.mouse.get_pos()[1] <= self.rect.bottom:
-            self.image = pygame.image.load(os.path.join(Settings.images_path, "black.png")).convert_alpha()
+            self.image = pygame.image.load(os.path.join(Settings.images_path, "tile.png")).convert_alpha()
             self.image = pygame.transform.scale(self.image, (66, 66))
             self.rect.left -= 1
             self.rect.top -= 1
