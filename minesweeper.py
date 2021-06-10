@@ -319,7 +319,7 @@ class Game(object):
                 for collision2 in self.collisions:
                     if collision != collision2:
                         if pygame.sprite.collide_rect(collision, collision2) and collision.moved == False:
-                            collision.image = pygame.image.load(os.path.join(Settings.images_path, "black.png")).convert_alpha()
+                            collision.image = pygame.image.load(os.path.join(Settings.images_path, "tile.png")).convert_alpha()
                             collision.image = pygame.transform.scale(collision.image, (66, 66))
                             collision.rect.left -= 1
                             collision.rect.top -= 1
