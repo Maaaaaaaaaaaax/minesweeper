@@ -269,7 +269,7 @@ class Game(object):
                                 self.numbers.add(self.number)
                                 #print(a, b)
 
-                print("Bomben:", len(self.mines))
+                #print("Bomben:", len(self.mines))
 
                 for number in self.numbers:
                     for number2 in self.numbers:
